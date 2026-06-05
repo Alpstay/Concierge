@@ -503,7 +503,7 @@ let lang="it";
 const I18N={
  it:{
    heroSub:"La tua Val Gardena, organizzata — esperienze, ristoranti, transfer e biglietti in un solo posto.",
-   more:"di più", demo:"foto demo",
+   more:"di più",
    emptyCat:"Nessuna proposta attiva in questa categoria. Aggiungila dall'area Staff.",
    footAbout:"Il raccoglitore digitale delle esperienze Alpstay. Ti aiutiamo a orientarti e a prenotare tutto ciò che rende speciale la tua vacanza in Val Gardena.",
    footHotels:"Hotels", footRest:"Ristoranti", footExp:"Esperienze",
@@ -532,7 +532,7 @@ const I18N={
  },
  en:{
    heroSub:"Your Val Gardena, organised — experiences, restaurants, transfers and tickets in one place.",
-   more:"more", demo:"demo photo",
+   more:"more",
    emptyCat:"No active items in this category yet. Add one from the Staff area.",
    footAbout:"The digital hub of Alpstay experiences. We help you find your way and book everything that makes your Val Gardena holiday special.",
    footHotels:"Hotels", footRest:"Restaurants", footExp:"Experiences",
@@ -561,7 +561,7 @@ const I18N={
  },
  de:{
    heroSub:"Dein Grödnertal, organisiert — Erlebnisse, Restaurants, Transfers und Tickets an einem Ort.",
-   more:"mehr", demo:"Demo-Foto",
+   more:"mehr",
    emptyCat:"Noch keine aktiven Einträge in dieser Kategorie. Füge einen im Staff-Bereich hinzu.",
    footAbout:"Der digitale Sammelpunkt der Alpstay-Erlebnisse. Wir helfen dir, dich zu orientieren und alles zu buchen, was deinen Urlaub im Grödnertal besonders macht.",
    footHotels:"Hotels", footRest:"Restaurants", footExp:"Erlebnisse",
@@ -590,7 +590,7 @@ const I18N={
  },
  zh:{
    heroSub:"为你打理好的瓦尔加迪纳——体验、餐厅、接送与门票，尽在一处。",
-   more:"了解更多", demo:"示例照片",
+   more:"了解更多",
    emptyCat:"该类别暂无已启用的内容。请在 Staff 区域添加。",
    footAbout:"Alpstay 体验的数字汇集平台。我们帮助你轻松规划，并预订让瓦尔加迪纳假期与众不同的一切。",
    footHotels:"酒店", footRest:"餐厅", footExp:"体验",
@@ -619,7 +619,7 @@ const I18N={
  },
  ko:{
    heroSub:"당신을 위해 준비된 발 가르데나 — 체험, 레스토랑, 트랜스퍼, 티켓을 한곳에서.",
-   more:"더보기", demo:"데모 사진",
+   more:"더보기",
    emptyCat:"이 카테고리에 활성화된 항목이 없습니다. Staff 영역에서 추가하세요.",
    footAbout:"알프스테이 경험을 한데 모은 디지털 허브. 발 가르데나 휴가를 특별하게 만드는 모든 것을 쉽게 찾고 예약하도록 도와드립니다.",
    footHotels:"호텔", footRest:"레스토랑", footExp:"체험",
@@ -870,8 +870,7 @@ function cardHtml(it,c,i){
   const sub=et(it,"subtitle")||c.tag;
   const img=it.img
     ? '<div class="card-img"><div class="card-ph"></div>'
-      +'<img src="'+escapeHtml(it.img)+'" loading="lazy" alt="'+escapeHtml(et(it,"title"))+'" onerror="this.style.display=\'none\'">'
-      +'<span class="card-demo">'+escapeHtml(tr("demo"))+'</span></div>'
+      +'<img src="'+escapeHtml(it.img)+'" loading="lazy" alt="'+escapeHtml(et(it,"title"))+'" onerror="this.style.display=\'none\'"></div>'
     : "";
   return '<article class="card" style="--accent:'+c.color+';animation-delay:'+((i||0)*70)+'ms">'
     +img
